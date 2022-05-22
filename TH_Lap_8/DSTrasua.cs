@@ -13,7 +13,7 @@ namespace TH_Lap_8
 {
     public partial class frm_Danhsachtrasua : Form
     {
-        //Chứa danh sách đối tượng trà sữa
+        //chua danh sach đối
         List<TraSua> lstTraSua = new List<TraSua>();
         public frm_Danhsachtrasua()
         {
@@ -91,5 +91,7 @@ namespace TH_Lap_8
         {
             lvw_TraSua.View = View.Tile;
         }
+
+        
     }
 }
