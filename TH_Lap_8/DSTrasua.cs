@@ -168,7 +168,7 @@ namespace TH_Lap_8
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Lỗi", "lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    MessageBox.Show("Lỗi", "Lỗi xxx", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                 }
 
