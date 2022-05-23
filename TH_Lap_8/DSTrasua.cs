@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TH_Lap_8
 {
     public partial class frm_Danhsachtrasua : Form
@@ -31,6 +32,8 @@ namespace TH_Lap_8
             foreach (var file in files)
             {
                 imageList.Images.Add(file.Name, Image.FromFile(file.FullName));
+
+                imageList1.Images.Add(file.Name, Image.FromFile(file.FullName));
             }
         }
         private void DocFile()
@@ -119,8 +122,6 @@ namespace TH_Lap_8
             //    txtSotien.Text = b[2];
             //}
 
-
-
             if (lvwTraSua.SelectedItems.Count == 0) return;
 
             txtMatra.Text = lvwTraSua.SelectedItems[0].SubItems[0].Text;
@@ -134,7 +135,49 @@ namespace TH_Lap_8
                 picImg.Image = imageList.Images[index];
             }
             else
+            {
                 picImg.Image = null;
+            }                       
+        }
+
+        private void picImg_Click(object sender, EventArgs e)
+        {
+            Stream stream = null;
+
+            ofdFile.InitialDirectory = "D:\\";
+
+            ofdFile.Filter = "Image files (*.jmg, *.jpeg, *.jpe, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            ofdFile.FilterIndex = 2;
+            ofdFile.RestoreDirectory = true;
+
+            // hiển thị hộp thoại
+
+            if(ofdFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // tập tin tồn tại
+
+                    if((stream = ofdFile.OpenFile()) != null)
+                    {
+                        using (stream)
+                        {
+                            picImg.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi", "lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                }
+
+                stream.Close();
+
+                stream.Dispose();
+                System.GC.Collect();
+            }
+
         }
     }
 }

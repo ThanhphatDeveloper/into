@@ -38,6 +38,7 @@ namespace TH_Lap_8
             this.radDetail = new System.Windows.Forms.RadioButton();
             this.radLargeicon = new System.Windows.Forms.RadioButton();
             this.grpChitettrasua = new System.Windows.Forms.GroupBox();
+            this.picImg = new System.Windows.Forms.PictureBox();
             this.btnLammoi = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -53,7 +54,8 @@ namespace TH_Lap_8
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.picImg = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ofdFile = new System.Windows.Forms.OpenFileDialog();
             this.grpViewStyle.SuspendLayout();
             this.grpChitettrasua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImg)).BeginInit();
@@ -175,6 +177,15 @@ namespace TH_Lap_8
             this.grpChitettrasua.TabIndex = 2;
             this.grpChitettrasua.TabStop = false;
             this.grpChitettrasua.Text = "Chi tiết trà sữa";
+            // 
+            // picImg
+            // 
+            this.picImg.Location = new System.Drawing.Point(46, 21);
+            this.picImg.Name = "picImg";
+            this.picImg.Size = new System.Drawing.Size(171, 108);
+            this.picImg.TabIndex = 13;
+            this.picImg.TabStop = false;
+            this.picImg.Click += new System.EventHandler(this.picImg_Click);
             // 
             // btnLammoi
             // 
@@ -307,24 +318,28 @@ namespace TH_Lap_8
             this.imageList.ImageSize = new System.Drawing.Size(55, 50);
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // picImg
+            // imageList1
             // 
-            this.picImg.Location = new System.Drawing.Point(46, 21);
-            this.picImg.Name = "picImg";
-            this.picImg.Size = new System.Drawing.Size(171, 108);
-            this.picImg.TabIndex = 13;
-            this.picImg.TabStop = false;
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // ofdFile
+            // 
+            this.ofdFile.FileName = "ofdFile";
             // 
             // frm_Danhsachtrasua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(821, 405);
             this.Controls.Add(this.lvwTraSua);
             this.Controls.Add(this.grpChitettrasua);
             this.Controls.Add(this.grpViewStyle);
             this.Controls.Add(this.lbl_DStrasua);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "frm_Danhsachtrasua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách trà sữa";
@@ -364,6 +379,8 @@ namespace TH_Lap_8
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.PictureBox picImg;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.OpenFileDialog ofdFile;
     }
 }
 
