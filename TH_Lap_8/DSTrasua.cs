@@ -63,35 +63,38 @@ namespace TH_Lap_8
                 lviTraSua.SubItems.Add(ts.TenTra);
                 lviTraSua.SubItems.Add(ts.DonGia.ToString());
 
-                lvw_TraSua.Items.Add(lviTraSua);
+                lvwTraSua.Items.Add(lviTraSua);
             }
         }
 
-        private void rad_Large_icon_CheckedChanged(object sender, EventArgs e)
+
+        private void radLargeicon_CheckedChanged(object sender, EventArgs e)
         {
-            lvw_TraSua.View = View.LargeIcon;
+            lvwTraSua.View = View.LargeIcon;
         }
 
-        private void rad_Detail_CheckedChanged(object sender, EventArgs e)
+        private void radDetail_CheckedChanged(object sender, EventArgs e)
         {
-            lvw_TraSua.View = View.Details;
+            lvwTraSua.View = View.Details;
         }
 
-        private void rad_Small_icon_CheckedChanged(object sender, EventArgs e)
+        private void radSmallicon_CheckedChanged(object sender, EventArgs e)
         {
-            lvw_TraSua.View = View.SmallIcon;
+            lvwTraSua.View = View.SmallIcon;
         }
 
-        private void rad_List_CheckedChanged(object sender, EventArgs e)
+        private void radList_CheckedChanged(object sender, EventArgs e)
         {
-            lvw_TraSua.View = View.List;
+            lvwTraSua.View = View.List;
         }
 
-        private void rad_Tile_CheckedChanged(object sender, EventArgs e)
+        private void radTile_CheckedChanged(object sender, EventArgs e)
         {
-            lvw_TraSua.View = View.Tile;
+            lvwTraSua.View = View.Tile;
         }
 
-        
+
+
+
     }
 }

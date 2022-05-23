@@ -31,30 +31,30 @@ namespace TH_Lap_8
         {
             this.components = new System.ComponentModel.Container();
             this.lbl_DStrasua = new System.Windows.Forms.Label();
-            this.grp_View_Style = new System.Windows.Forms.GroupBox();
-            this.rad_Tile = new System.Windows.Forms.RadioButton();
-            this.rad_List = new System.Windows.Forms.RadioButton();
-            this.rad_Small_icon = new System.Windows.Forms.RadioButton();
-            this.rad_Detail = new System.Windows.Forms.RadioButton();
-            this.rad_Large_icon = new System.Windows.Forms.RadioButton();
-            this.grp_Chitet_trasua = new System.Windows.Forms.GroupBox();
-            this.btn_Lammoi = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
-            this.txt_Sotien = new System.Windows.Forms.TextBox();
-            this.txt_Tentra = new System.Windows.Forms.TextBox();
-            this.txt_Matra = new System.Windows.Forms.TextBox();
+            this.grpViewStyle = new System.Windows.Forms.GroupBox();
+            this.radTile = new System.Windows.Forms.RadioButton();
+            this.radList = new System.Windows.Forms.RadioButton();
+            this.radSmallicon = new System.Windows.Forms.RadioButton();
+            this.radDetail = new System.Windows.Forms.RadioButton();
+            this.radLargeicon = new System.Windows.Forms.RadioButton();
+            this.grpChitettrasua = new System.Windows.Forms.GroupBox();
+            this.btnLammoi = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtSotien = new System.Windows.Forms.TextBox();
+            this.txtTentra = new System.Windows.Forms.TextBox();
+            this.txtMatra = new System.Windows.Forms.TextBox();
             this.lbl_Sotien = new System.Windows.Forms.Label();
             this.lbl_Tentra = new System.Windows.Forms.Label();
             this.lbl_Matra = new System.Windows.Forms.Label();
-            this.lvw_TraSua = new System.Windows.Forms.ListView();
+            this.lvwTraSua = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.grp_View_Style.SuspendLayout();
-            this.grp_Chitet_trasua.SuspendLayout();
+            this.grpViewStyle.SuspendLayout();
+            this.grpChitettrasua.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_DStrasua
@@ -69,173 +69,174 @@ namespace TH_Lap_8
             this.lbl_DStrasua.TabIndex = 0;
             this.lbl_DStrasua.Text = "DANH SÁCH TRÀ SỮA";
             // 
-            // grp_View_Style
+            // grpViewStyle
             // 
-            this.grp_View_Style.Controls.Add(this.rad_Tile);
-            this.grp_View_Style.Controls.Add(this.rad_List);
-            this.grp_View_Style.Controls.Add(this.rad_Small_icon);
-            this.grp_View_Style.Controls.Add(this.rad_Detail);
-            this.grp_View_Style.Controls.Add(this.rad_Large_icon);
-            this.grp_View_Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grp_View_Style.Location = new System.Drawing.Point(22, 53);
-            this.grp_View_Style.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grp_View_Style.Name = "grp_View_Style";
-            this.grp_View_Style.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grp_View_Style.Size = new System.Drawing.Size(510, 70);
-            this.grp_View_Style.TabIndex = 1;
-            this.grp_View_Style.TabStop = false;
-            this.grp_View_Style.Text = "View Style";
+            this.grpViewStyle.Controls.Add(this.radTile);
+            this.grpViewStyle.Controls.Add(this.radList);
+            this.grpViewStyle.Controls.Add(this.radSmallicon);
+            this.grpViewStyle.Controls.Add(this.radDetail);
+            this.grpViewStyle.Controls.Add(this.radLargeicon);
+            this.grpViewStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpViewStyle.Location = new System.Drawing.Point(22, 53);
+            this.grpViewStyle.Margin = new System.Windows.Forms.Padding(2);
+            this.grpViewStyle.Name = "grpViewStyle";
+            this.grpViewStyle.Padding = new System.Windows.Forms.Padding(2);
+            this.grpViewStyle.Size = new System.Drawing.Size(510, 70);
+            this.grpViewStyle.TabIndex = 1;
+            this.grpViewStyle.TabStop = false;
+            this.grpViewStyle.Text = "View Style";
             // 
-            // rad_Tile
+            // radTile
             // 
-            this.rad_Tile.AutoSize = true;
-            this.rad_Tile.Location = new System.Drawing.Point(398, 29);
-            this.rad_Tile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rad_Tile.Name = "rad_Tile";
-            this.rad_Tile.Size = new System.Drawing.Size(49, 21);
-            this.rad_Tile.TabIndex = 4;
-            this.rad_Tile.TabStop = true;
-            this.rad_Tile.Text = "Tile";
-            this.rad_Tile.UseVisualStyleBackColor = true;
-            this.rad_Tile.CheckedChanged += new System.EventHandler(this.rad_Tile_CheckedChanged);
+            this.radTile.AutoSize = true;
+            this.radTile.Location = new System.Drawing.Point(398, 29);
+            this.radTile.Margin = new System.Windows.Forms.Padding(2);
+            this.radTile.Name = "radTile";
+            this.radTile.Size = new System.Drawing.Size(49, 21);
+            this.radTile.TabIndex = 5;
+            this.radTile.TabStop = true;
+            this.radTile.Text = "Tile";
+            this.radTile.UseVisualStyleBackColor = true;
+            this.radTile.CheckedChanged += new System.EventHandler(this.radTile_CheckedChanged);
             // 
-            // rad_List
+            // radList
             // 
-            this.rad_List.AutoSize = true;
-            this.rad_List.Location = new System.Drawing.Point(323, 29);
-            this.rad_List.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rad_List.Name = "rad_List";
-            this.rad_List.Size = new System.Drawing.Size(48, 21);
-            this.rad_List.TabIndex = 3;
-            this.rad_List.TabStop = true;
-            this.rad_List.Text = "List";
-            this.rad_List.UseVisualStyleBackColor = true;
-            this.rad_List.CheckedChanged += new System.EventHandler(this.rad_List_CheckedChanged);
+            this.radList.AutoSize = true;
+            this.radList.Location = new System.Drawing.Point(323, 29);
+            this.radList.Margin = new System.Windows.Forms.Padding(2);
+            this.radList.Name = "radList";
+            this.radList.Size = new System.Drawing.Size(48, 21);
+            this.radList.TabIndex = 4;
+            this.radList.TabStop = true;
+            this.radList.Text = "List";
+            this.radList.UseVisualStyleBackColor = true;
+            this.radList.CheckedChanged += new System.EventHandler(this.radList_CheckedChanged);
             // 
-            // rad_Small_icon
+            // radSmallicon
             // 
-            this.rad_Small_icon.AutoSize = true;
-            this.rad_Small_icon.Location = new System.Drawing.Point(209, 29);
-            this.rad_Small_icon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rad_Small_icon.Name = "rad_Small_icon";
-            this.rad_Small_icon.Size = new System.Drawing.Size(90, 21);
-            this.rad_Small_icon.TabIndex = 2;
-            this.rad_Small_icon.TabStop = true;
-            this.rad_Small_icon.Text = "Small Icon";
-            this.rad_Small_icon.UseVisualStyleBackColor = true;
-            this.rad_Small_icon.CheckedChanged += new System.EventHandler(this.rad_Small_icon_CheckedChanged);
+            this.radSmallicon.AutoSize = true;
+            this.radSmallicon.Location = new System.Drawing.Point(209, 29);
+            this.radSmallicon.Margin = new System.Windows.Forms.Padding(2);
+            this.radSmallicon.Name = "radSmallicon";
+            this.radSmallicon.Size = new System.Drawing.Size(90, 21);
+            this.radSmallicon.TabIndex = 3;
+            this.radSmallicon.TabStop = true;
+            this.radSmallicon.Text = "Small Icon";
+            this.radSmallicon.UseVisualStyleBackColor = true;
+            this.radSmallicon.CheckedChanged += new System.EventHandler(this.radSmallicon_CheckedChanged);
             // 
-            // rad_Detail
+            // radDetail
             // 
-            this.rad_Detail.AutoSize = true;
-            this.rad_Detail.Location = new System.Drawing.Point(119, 29);
-            this.rad_Detail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rad_Detail.Name = "rad_Detail";
-            this.rad_Detail.Size = new System.Drawing.Size(62, 21);
-            this.rad_Detail.TabIndex = 1;
-            this.rad_Detail.TabStop = true;
-            this.rad_Detail.Text = "Detail";
-            this.rad_Detail.UseVisualStyleBackColor = true;
-            this.rad_Detail.CheckedChanged += new System.EventHandler(this.rad_Detail_CheckedChanged);
+            this.radDetail.AutoSize = true;
+            this.radDetail.Location = new System.Drawing.Point(119, 29);
+            this.radDetail.Margin = new System.Windows.Forms.Padding(2);
+            this.radDetail.Name = "radDetail";
+            this.radDetail.Size = new System.Drawing.Size(62, 21);
+            this.radDetail.TabIndex = 2;
+            this.radDetail.TabStop = true;
+            this.radDetail.Text = "Detail";
+            this.radDetail.UseVisualStyleBackColor = true;
+            this.radDetail.CheckedChanged += new System.EventHandler(this.radDetail_CheckedChanged);
             // 
-            // rad_Large_icon
+            // radLargeicon
             // 
-            this.rad_Large_icon.AutoSize = true;
-            this.rad_Large_icon.Location = new System.Drawing.Point(5, 29);
-            this.rad_Large_icon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rad_Large_icon.Name = "rad_Large_icon";
-            this.rad_Large_icon.Size = new System.Drawing.Size(93, 21);
-            this.rad_Large_icon.TabIndex = 0;
-            this.rad_Large_icon.TabStop = true;
-            this.rad_Large_icon.Text = "Large Icon";
-            this.rad_Large_icon.UseVisualStyleBackColor = true;
-            this.rad_Large_icon.CheckedChanged += new System.EventHandler(this.rad_Large_icon_CheckedChanged);
+            this.radLargeicon.AutoSize = true;
+            this.radLargeicon.Location = new System.Drawing.Point(5, 29);
+            this.radLargeicon.Margin = new System.Windows.Forms.Padding(2);
+            this.radLargeicon.Name = "radLargeicon";
+            this.radLargeicon.Size = new System.Drawing.Size(93, 21);
+            this.radLargeicon.TabIndex = 1;
+            this.radLargeicon.TabStop = true;
+            this.radLargeicon.Text = "Large Icon";
+            this.radLargeicon.UseVisualStyleBackColor = true;
+            this.radLargeicon.CheckedChanged += new System.EventHandler(this.radLargeicon_CheckedChanged);
             // 
-            // grp_Chitet_trasua
+            // grpChitettrasua
             // 
-            this.grp_Chitet_trasua.Controls.Add(this.btn_Lammoi);
-            this.grp_Chitet_trasua.Controls.Add(this.btn_Xoa);
-            this.grp_Chitet_trasua.Controls.Add(this.btn_Sua);
-            this.grp_Chitet_trasua.Controls.Add(this.btn_Them);
-            this.grp_Chitet_trasua.Controls.Add(this.txt_Sotien);
-            this.grp_Chitet_trasua.Controls.Add(this.txt_Tentra);
-            this.grp_Chitet_trasua.Controls.Add(this.txt_Matra);
-            this.grp_Chitet_trasua.Controls.Add(this.lbl_Sotien);
-            this.grp_Chitet_trasua.Controls.Add(this.lbl_Tentra);
-            this.grp_Chitet_trasua.Controls.Add(this.lbl_Matra);
-            this.grp_Chitet_trasua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grp_Chitet_trasua.Location = new System.Drawing.Point(545, 53);
-            this.grp_Chitet_trasua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grp_Chitet_trasua.Name = "grp_Chitet_trasua";
-            this.grp_Chitet_trasua.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grp_Chitet_trasua.Size = new System.Drawing.Size(260, 342);
-            this.grp_Chitet_trasua.TabIndex = 2;
-            this.grp_Chitet_trasua.TabStop = false;
-            this.grp_Chitet_trasua.Text = "Chi tiết trà sữa";
+            this.grpChitettrasua.Controls.Add(this.btnLammoi);
+            this.grpChitettrasua.Controls.Add(this.btnXoa);
+            this.grpChitettrasua.Controls.Add(this.btnSua);
+            this.grpChitettrasua.Controls.Add(this.btnThem);
+            this.grpChitettrasua.Controls.Add(this.txtSotien);
+            this.grpChitettrasua.Controls.Add(this.txtTentra);
+            this.grpChitettrasua.Controls.Add(this.txtMatra);
+            this.grpChitettrasua.Controls.Add(this.lbl_Sotien);
+            this.grpChitettrasua.Controls.Add(this.lbl_Tentra);
+            this.grpChitettrasua.Controls.Add(this.lbl_Matra);
+            this.grpChitettrasua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpChitettrasua.Location = new System.Drawing.Point(545, 53);
+            this.grpChitettrasua.Margin = new System.Windows.Forms.Padding(2);
+            this.grpChitettrasua.Name = "grpChitettrasua";
+            this.grpChitettrasua.Padding = new System.Windows.Forms.Padding(2);
+            this.grpChitettrasua.Size = new System.Drawing.Size(260, 342);
+            this.grpChitettrasua.TabIndex = 2;
+            this.grpChitettrasua.TabStop = false;
+            this.grpChitettrasua.Text = "Chi tiết trà sữa";
             // 
-            // btn_Lammoi
+            // btnLammoi
             // 
-            this.btn_Lammoi.Location = new System.Drawing.Point(161, 297);
-            this.btn_Lammoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Lammoi.Name = "btn_Lammoi";
-            this.btn_Lammoi.Size = new System.Drawing.Size(56, 25);
-            this.btn_Lammoi.TabIndex = 9;
-            this.btn_Lammoi.Text = "Làm mới";
-            this.btn_Lammoi.UseVisualStyleBackColor = true;
+            this.btnLammoi.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnLammoi.Location = new System.Drawing.Point(161, 297);
+            this.btnLammoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLammoi.Name = "btnLammoi";
+            this.btnLammoi.Size = new System.Drawing.Size(56, 25);
+            this.btnLammoi.TabIndex = 12;
+            this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.UseVisualStyleBackColor = true;
             // 
-            // btn_Xoa
+            // btnXoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(72, 297);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(56, 25);
-            this.btn_Xoa.TabIndex = 8;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(72, 297);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(56, 25);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // btn_Sua
+            // btnSua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(161, 250);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(56, 25);
-            this.btn_Sua.TabIndex = 7;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(161, 250);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(56, 25);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // btn_Them
+            // btnThem
             // 
-            this.btn_Them.Location = new System.Drawing.Point(72, 250);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(56, 25);
-            this.btn_Them.TabIndex = 6;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(72, 250);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(56, 25);
+            this.btnThem.TabIndex = 9;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // txt_Sotien
+            // txtSotien
             // 
-            this.txt_Sotien.Location = new System.Drawing.Point(72, 210);
-            this.txt_Sotien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_Sotien.Name = "txt_Sotien";
-            this.txt_Sotien.Size = new System.Drawing.Size(156, 23);
-            this.txt_Sotien.TabIndex = 5;
+            this.txtSotien.Location = new System.Drawing.Point(72, 210);
+            this.txtSotien.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSotien.Name = "txtSotien";
+            this.txtSotien.Size = new System.Drawing.Size(156, 23);
+            this.txtSotien.TabIndex = 8;
             // 
-            // txt_Tentra
+            // txtTentra
             // 
-            this.txt_Tentra.Location = new System.Drawing.Point(72, 179);
-            this.txt_Tentra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_Tentra.Name = "txt_Tentra";
-            this.txt_Tentra.Size = new System.Drawing.Size(156, 23);
-            this.txt_Tentra.TabIndex = 4;
+            this.txtTentra.Location = new System.Drawing.Point(72, 179);
+            this.txtTentra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTentra.Name = "txtTentra";
+            this.txtTentra.Size = new System.Drawing.Size(156, 23);
+            this.txtTentra.TabIndex = 7;
             // 
-            // txt_Matra
+            // txtMatra
             // 
-            this.txt_Matra.Location = new System.Drawing.Point(72, 147);
-            this.txt_Matra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_Matra.Name = "txt_Matra";
-            this.txt_Matra.Size = new System.Drawing.Size(156, 23);
-            this.txt_Matra.TabIndex = 3;
+            this.txtMatra.Location = new System.Drawing.Point(72, 147);
+            this.txtMatra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMatra.Name = "txtMatra";
+            this.txtMatra.Size = new System.Drawing.Size(156, 23);
+            this.txtMatra.TabIndex = 6;
             // 
             // lbl_Sotien
             // 
@@ -266,22 +267,23 @@ namespace TH_Lap_8
             this.lbl_Matra.Size = new System.Drawing.Size(48, 17);
             this.lbl_Matra.TabIndex = 0;
             this.lbl_Matra.Text = "Mã trà";
+            this.lbl_Matra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lvw_TraSua
+            // lvwTraSua
             // 
-            this.lvw_TraSua.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwTraSua.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.lvw_TraSua.HideSelection = false;
-            this.lvw_TraSua.LargeImageList = this.imageList;
-            this.lvw_TraSua.Location = new System.Drawing.Point(22, 148);
-            this.lvw_TraSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lvw_TraSua.Name = "lvw_TraSua";
-            this.lvw_TraSua.Size = new System.Drawing.Size(511, 236);
-            this.lvw_TraSua.SmallImageList = this.imageList;
-            this.lvw_TraSua.TabIndex = 3;
-            this.lvw_TraSua.UseCompatibleStateImageBehavior = false;
+            this.lvwTraSua.HideSelection = false;
+            this.lvwTraSua.LargeImageList = this.imageList;
+            this.lvwTraSua.Location = new System.Drawing.Point(22, 148);
+            this.lvwTraSua.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwTraSua.Name = "lvwTraSua";
+            this.lvwTraSua.Size = new System.Drawing.Size(511, 236);
+            this.lvwTraSua.SmallImageList = this.imageList;
+            this.lvwTraSua.TabIndex = 3;
+            this.lvwTraSua.UseCompatibleStateImageBehavior = false;
             // 
             // columnHeader1
             // 
@@ -306,18 +308,18 @@ namespace TH_Lap_8
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 405);
-            this.Controls.Add(this.lvw_TraSua);
-            this.Controls.Add(this.grp_Chitet_trasua);
-            this.Controls.Add(this.grp_View_Style);
+            this.Controls.Add(this.lvwTraSua);
+            this.Controls.Add(this.grpChitettrasua);
+            this.Controls.Add(this.grpViewStyle);
             this.Controls.Add(this.lbl_DStrasua);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Danhsachtrasua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách trà sữa";
-            this.grp_View_Style.ResumeLayout(false);
-            this.grp_View_Style.PerformLayout();
-            this.grp_Chitet_trasua.ResumeLayout(false);
-            this.grp_Chitet_trasua.PerformLayout();
+            this.grpViewStyle.ResumeLayout(false);
+            this.grpViewStyle.PerformLayout();
+            this.grpChitettrasua.ResumeLayout(false);
+            this.grpChitettrasua.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,24 +328,24 @@ namespace TH_Lap_8
         #endregion
 
         private System.Windows.Forms.Label lbl_DStrasua;
-        private System.Windows.Forms.GroupBox grp_View_Style;
-        private System.Windows.Forms.GroupBox grp_Chitet_trasua;
-        private System.Windows.Forms.RadioButton rad_Large_icon;
-        private System.Windows.Forms.RadioButton rad_Detail;
-        private System.Windows.Forms.RadioButton rad_Small_icon;
-        private System.Windows.Forms.RadioButton rad_List;
-        private System.Windows.Forms.RadioButton rad_Tile;
+        private System.Windows.Forms.GroupBox grpViewStyle;
+        private System.Windows.Forms.GroupBox grpChitettrasua;
+        private System.Windows.Forms.RadioButton radLargeicon;
+        private System.Windows.Forms.RadioButton radDetail;
+        private System.Windows.Forms.RadioButton radSmallicon;
+        private System.Windows.Forms.RadioButton radList;
+        private System.Windows.Forms.RadioButton radTile;
         private System.Windows.Forms.Label lbl_Matra;
         private System.Windows.Forms.Label lbl_Sotien;
         private System.Windows.Forms.Label lbl_Tentra;
-        private System.Windows.Forms.TextBox txt_Matra;
-        private System.Windows.Forms.TextBox txt_Tentra;
-        private System.Windows.Forms.TextBox txt_Sotien;
-        private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_Lammoi;
-        private System.Windows.Forms.ListView lvw_TraSua;
+        private System.Windows.Forms.TextBox txtMatra;
+        private System.Windows.Forms.TextBox txtTentra;
+        private System.Windows.Forms.TextBox txtSotien;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnLammoi;
+        private System.Windows.Forms.ListView lvwTraSua;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
