@@ -93,8 +93,48 @@ namespace TH_Lap_8
             lvwTraSua.View = View.Tile;
         }
 
+        private void lvwTraSua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string[] trasua = File.ReadAllLines(@"D:\Danh_Sach_Tra_Sua\TRASUA\DSTraSua.txt");
+
+
+            //if(lvwTraSua.SelectedItems.Count != 0)
+            //{
+            //    int indexTrasua = lvwTraSua.SelectedIndices[0];
+
+            //    if (indexTrasua < imageList.Images.Count)
+            //    {
+            //        picImg.Image = imageList.Images[indexTrasua];
+            //    }
+            //    else
+            //    {
+            //        picImg.Image = null;
+            //    }
+
+
+            //    string[] b = trasua[indexTrasua].Split(',');
+
+            //    txtMatra.Text = b[0];
+            //    txtTentra.Text = b[1];
+            //    txtSotien.Text = b[2];
+            //}
 
 
 
+            if (lvwTraSua.SelectedItems.Count == 0) return;
+
+            txtMatra.Text = lvwTraSua.SelectedItems[0].SubItems[0].Text;
+            txtTentra.Text = lvwTraSua.SelectedItems[0].SubItems[1].Text;
+            txtSotien.Text = lvwTraSua.SelectedItems[0].SubItems[2].Text;
+
+            int index = lvwTraSua.SelectedIndices[0];
+
+            if (index < imageList.Images.Count)
+            {
+                picImg.Image = imageList.Images[index];
+            }
+            else
+                picImg.Image = null;
+        }
     }
 }

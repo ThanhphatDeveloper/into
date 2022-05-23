@@ -53,8 +53,10 @@ namespace TH_Lap_8
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.picImg = new System.Windows.Forms.PictureBox();
             this.grpViewStyle.SuspendLayout();
             this.grpChitettrasua.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_DStrasua
@@ -153,6 +155,7 @@ namespace TH_Lap_8
             // 
             // grpChitettrasua
             // 
+            this.grpChitettrasua.Controls.Add(this.picImg);
             this.grpChitettrasua.Controls.Add(this.btnLammoi);
             this.grpChitettrasua.Controls.Add(this.btnXoa);
             this.grpChitettrasua.Controls.Add(this.btnSua);
@@ -284,6 +287,7 @@ namespace TH_Lap_8
             this.lvwTraSua.SmallImageList = this.imageList;
             this.lvwTraSua.TabIndex = 3;
             this.lvwTraSua.UseCompatibleStateImageBehavior = false;
+            this.lvwTraSua.SelectedIndexChanged += new System.EventHandler(this.lvwTraSua_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -303,6 +307,14 @@ namespace TH_Lap_8
             this.imageList.ImageSize = new System.Drawing.Size(55, 50);
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // picImg
+            // 
+            this.picImg.Location = new System.Drawing.Point(46, 21);
+            this.picImg.Name = "picImg";
+            this.picImg.Size = new System.Drawing.Size(171, 108);
+            this.picImg.TabIndex = 13;
+            this.picImg.TabStop = false;
+            // 
             // frm_Danhsachtrasua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +332,7 @@ namespace TH_Lap_8
             this.grpViewStyle.PerformLayout();
             this.grpChitettrasua.ResumeLayout(false);
             this.grpChitettrasua.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,6 +363,7 @@ namespace TH_Lap_8
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.PictureBox picImg;
     }
 }
 
