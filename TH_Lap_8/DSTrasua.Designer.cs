@@ -180,9 +180,9 @@ namespace TH_Lap_8
             // 
             // picImg
             // 
-            this.picImg.Location = new System.Drawing.Point(46, 21);
+            this.picImg.Location = new System.Drawing.Point(30, 21);
             this.picImg.Name = "picImg";
-            this.picImg.Size = new System.Drawing.Size(171, 108);
+            this.picImg.Size = new System.Drawing.Size(213, 108);
             this.picImg.TabIndex = 13;
             this.picImg.TabStop = false;
             this.picImg.Click += new System.EventHandler(this.picImg_Click);
@@ -197,6 +197,7 @@ namespace TH_Lap_8
             this.btnLammoi.TabIndex = 12;
             this.btnLammoi.Text = "Làm mới";
             this.btnLammoi.UseVisualStyleBackColor = true;
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
             // btnXoa
             // 
@@ -207,6 +208,7 @@ namespace TH_Lap_8
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -227,6 +229,7 @@ namespace TH_Lap_8
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtSotien
             // 

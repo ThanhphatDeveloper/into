@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Imaging;
 
 
 namespace TH_Lap_8
@@ -21,8 +22,52 @@ namespace TH_Lap_8
             InitializeComponent();
             DocFile();
             LoadImageList();
-            LoadData();
+            LoadData1();
         }
+
+        private void Docfile()
+        {
+            lstTraSua.Clear();
+            string line;
+            string[] split;
+            StreamReader srd = new StreamReader("../../TRASUA/DSTraSua.txt");
+            while ((line = srd.ReadLine()) != null)
+            {
+                split = line.Split(',');
+                TraSua ts = new TraSua
+                {
+                    MaTra = split[0],
+                    TenTra = split[1],
+                    DonGia = int.Parse(split[2])
+                };
+                lstTraSua.Add(ts);
+            }
+        }
+        private void Loadimg()
+        {
+            imageList.Images.Clear();
+            imageList1.Images.Clear();
+            DirectoryInfo dir = new DirectoryInfo("../../TRASUA/img");
+            FileInfo[] files = dir.GetFiles("*.jpg");
+            foreach (var file in files)
+            {
+                imageList.Images.Add(file.Name, Image.FromFile(file.FullName));
+                imageList1.Images.Add(file.Name, Image.FromFile(file.FullName));
+            }
+        }
+        private void LoadData()
+        {
+            lvwTraSua.Items.Clear();
+            foreach (var ts in lstTraSua)
+            {
+                ListViewItem items = new ListViewItem(ts.MaTra, ts.MaTra + ".jpg");
+                items.SubItems.Add(ts.TenTra);
+                items.SubItems.Add(ts.DonGia.ToString());
+                lvwTraSua.Items.Add(items);
+            }
+
+        }
+
         private void LoadImageList()
         {
             DirectoryInfo dir = new DirectoryInfo("img"); // truy xu?t thu m?c ch?a hình ?nh img
@@ -42,7 +87,8 @@ namespace TH_Lap_8
 
             string[] splitters; // TS001 | Song V? Nhi?t Ð?i | 25000
 
-            StreamReader srd = new StreamReader("DSTraSua.txt");
+            StreamReader srd = new StreamReader("../DSTraSua.txt");
+
             while ((line = srd.ReadLine()) != null)
             {
                 splitters = line.Split(','); // c?t chu?i theo d?u ,
@@ -58,7 +104,7 @@ namespace TH_Lap_8
             }
         }
 
-        private void LoadData()
+        private void LoadData1()
         {
             foreach (var ts in lstTraSua)
             {
@@ -70,6 +116,34 @@ namespace TH_Lap_8
             }
         }
 
+        private void WriteFile()
+        {
+            using (StreamWriter sw = new StreamWriter(@"..\TRASUA\DSTraSua.txt", false))
+            {
+                for (int i = 0; i < lstTraSua.Count; i++)
+                {
+                    string line = string.Format("{0},{1},{2}", lstTraSua[i].MaTra, lstTraSua[i].TenTra, lstTraSua[i].DonGia);
+                    sw.WriteLine(line);
+                }
+                sw.Close();
+                sw.Dispose();
+                System.GC.Collect();
+            }
+        }
+
+        public byte[] ConvertImageToByteArray(Image imageToConvert)
+        {
+            using (var ms = new MemoryStream())
+            {
+                //Chuyển image sang kiểu bitmap
+                Bitmap bmp = new Bitmap(imageToConvert);
+
+                //Lưu bitmap thành MemoryStream cho việc lưu trữ ảnh
+                bmp.Save(ms, ImageFormat.Jpeg);
+
+                return ms.ToArray();
+            }
+        }
 
         private void radLargeicon_CheckedChanged(object sender, EventArgs e)
         {
@@ -98,29 +172,7 @@ namespace TH_Lap_8
 
         private void lvwTraSua_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //string[] trasua = File.ReadAllLines(@"D:\Danh_Sach_Tra_Sua\TRASUA\DSTraSua.txt");
-
-
-            //if(lvwTraSua.SelectedItems.Count != 0)
-            //{
-            //    int indexTrasua = lvwTraSua.SelectedIndices[0];
-
-            //    if (indexTrasua < imageList.Images.Count)
-            //    {
-            //        picImg.Image = imageList.Images[indexTrasua];
-            //    }
-            //    else
-            //    {
-            //        picImg.Image = null;
-            //    }
-
-
-            //    string[] b = trasua[indexTrasua].Split(',');
-
-            //    txtMatra.Text = b[0];
-            //    txtTentra.Text = b[1];
-            //    txtSotien.Text = b[2];
-            //}
+            
 
             if (lvwTraSua.SelectedItems.Count == 0) return;
 
@@ -146,8 +198,8 @@ namespace TH_Lap_8
 
             ofdFile.InitialDirectory = "D:\\";
 
-            ofdFile.Filter = "Image files (*.jmg, *.jpeg, *.jpe, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            ofdFile.FilterIndex = 2;
+            ofdFile.Filter = "Image files (*.jmg, *.jpeg, *.jpe, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";// chỉ mở được các file hình
+            ofdFile.FilterIndex = 2; // cho phép chọn cái thứ 2
             ofdFile.RestoreDirectory = true;
 
             // hiển thị hộp thoại
@@ -178,6 +230,74 @@ namespace TH_Lap_8
                 System.GC.Collect();
             }
 
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+
+            TraSua ts = new TraSua
+            {
+                MaTra = txtMatra.Text,
+                TenTra = txtTentra.Text,
+                DonGia = int.Parse(txtSotien.Text)
+            };
+
+            lstTraSua.Add(ts);
+
+            // lưu ảnh
+            using (MemoryStream memory = new MemoryStream())
+            {
+                using (FileStream fs = new FileStream("../../TRASUA/img/" + txtMatra.Text + ".jpg", FileMode.Create, FileAccess.ReadWrite))
+                {
+                    byte[] bytes = ConvertImageToByteArray(picImg.Image);
+                    fs.Write(bytes, 0, bytes.Length);
+                }
+            }
+            // ghi file
+            WriteFile();
+
+
+            //Xóa sạch các textbox khi dữ liệu đã được thêm vào
+            txtMatra.Text = string.Empty;
+            txtTentra.Text = string.Empty;
+            txtSotien.Text = string.Empty;
+            picImg.Image = null;
+
+            //2 chức năng xóa và sửa bất hoạt
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            btnThem.Enabled = true;
+            txtMatra.Enabled = true;
+
+            Docfile();
+            Loadimg();
+            LoadData1();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lvwTraSua.Items.Count; i++)
+            {
+                if (lvwTraSua.Items[i].Selected)
+                {
+                    lvwTraSua.Items[i].Remove();
+
+                    btnLammoi_Click(sender, e);
+                }
+            }
+
+        }
+
+        private void btnLammoi_Click(object sender, EventArgs e)
+        {
+            picImg.Image = null;
+            txtMatra.Text = string.Empty;
+            txtSotien.Text = string.Empty;
+            txtTentra.Text = string.Empty;
+            txtMatra.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
     }
 }
