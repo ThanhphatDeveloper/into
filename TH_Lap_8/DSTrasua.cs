@@ -47,7 +47,7 @@ namespace TH_Lap_8
         {
             imageList.Images.Clear();
             imageList1.Images.Clear();
-            DirectoryInfo dir = new DirectoryInfo("../../TRASUA/img");
+            DirectoryInfo dir = new DirectoryInfo("../../TRASUA/");
             FileInfo[] files = dir.GetFiles("*.jpg");
             foreach (var file in files)
             {
@@ -70,7 +70,7 @@ namespace TH_Lap_8
 
         private void LoadImageList()
         {
-            DirectoryInfo dir = new DirectoryInfo("img"); // truy xu?t thu m?c ch?a hình ?nh img
+            DirectoryInfo dir = new DirectoryInfo("../../TRASUA/"); // truy xu?t thu m?c ch?a hình ?nh img
 
             FileInfo[] files = dir.GetFiles("*.jpg");
 
@@ -87,7 +87,7 @@ namespace TH_Lap_8
 
             string[] splitters; // TS001 | Song V? Nhi?t Ð?i | 25000
 
-            StreamReader srd = new StreamReader("../DSTraSua.txt");
+            StreamReader srd = new StreamReader(@"..\..\TRASUA\DSTraSua.txt");
 
             while ((line = srd.ReadLine()) != null)
             {
@@ -118,7 +118,7 @@ namespace TH_Lap_8
 
         private void WriteFile()
         {
-            using (StreamWriter sw = new StreamWriter(@"..\TRASUA\DSTraSua.txt", false))
+            using (StreamWriter sw = new StreamWriter("../../TRASUA/DSTraSua.txt", false))
             {
                 for (int i = 0; i < lstTraSua.Count; i++)
                 {
@@ -248,7 +248,7 @@ namespace TH_Lap_8
             // lưu ảnh
             using (MemoryStream memory = new MemoryStream())
             {
-                using (FileStream fs = new FileStream("../../TRASUA/img/" + txtMatra.Text + ".jpg", FileMode.Create, FileAccess.ReadWrite))
+                using (FileStream fs = new FileStream("../../TRASUA/" + txtMatra.Text + ".jpg", FileMode.Create, FileAccess.ReadWrite))
                 {
                     byte[] bytes = ConvertImageToByteArray(picImg.Image);
                     fs.Write(bytes, 0, bytes.Length);
